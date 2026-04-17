@@ -1,6 +1,3 @@
 import express from 'express';
 
-
-class ExpressServer {
-    
-}
+class ExpressServer {}

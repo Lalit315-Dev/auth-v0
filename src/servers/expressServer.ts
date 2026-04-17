@@ -1,10 +1,10 @@
-import type { IServer } from "../interfaces/IServer.js";
+import type { IServer } from '../interfaces/IServer.js';
 import express from 'express';
-import type { Express } from "express";
+import type { Express } from 'express';
 
 class ExpressServer implements IServer {
-    private readonly app:Express
-    constructor(app:Express) {
+    private readonly app: Express;
+    constructor(app: Express) {
         this.app = app;
         this.addGlobalMiddlewares();
         this.addAppMiddlewares();
@@ -15,19 +15,13 @@ class ExpressServer implements IServer {
         this.app.use(express.json());
     }
 
-    addAppMiddlewares(): void {
-        
-    }
+    addAppMiddlewares(): void {}
 
-    addErrorMiddleware(): void {
-        
-    }
+    addErrorMiddleware(): void {}
 
-    run(port: number): void {
-        
-    }
+    run(port: number): void {}
 }
 
-const server:IServer = new ExpressServer(express());
+const server: IServer = new ExpressServer(express());
 
 export default server;
